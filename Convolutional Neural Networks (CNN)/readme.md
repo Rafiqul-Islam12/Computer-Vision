@@ -124,6 +124,41 @@
 <img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img11.png" width="600">    
 
 ---
+### ***Convolutional Layer-এর Problem:***     
+- ***Convolution-এর পরে অনেক feature map তৈরি হয়।***      
+  ***অনেক layer হলে computation এবং memory বেশি লাগে।***      
+- ***Too much information***   
+  ***Convolution অনেক detailed feature ধরে রাখে, কিন্তু সব feature সবসময় দরকার হয় না।***    
+- ***Computational Cost বেশি***    
+  ***Large feature map নিয়ে পরবর্তী layer-এ কাজ করলে processing time বেড়ে যায়।***     
+
+--- 
+# ***2. POOLING LAYER***     
+- ***Pooling Layer-এর প্রধান কাজ হলো Dimensionality Reduction।***   
+- ***Pooling feature map-এর height এবং width কমিয়ে দেয়।***  
+- ***Important features রেখে unnecessary information কমিয়ে দেয়।***  
+- ***Computation ও memory requirement কমায়।***  
+- ***Model training দ্রুত করে।***
+     
+***Pooling কোনো kernel/filter ব্যবহার করে না।     
+Pooling channel number কমায় না।    
+এটি প্রতিটি channel-এর উপর আলাদাভাবে কাজ করে।   
+Example:   
+Before Pooling:   
+Feature Map: 4 × 4 × 64   
+After Pooling:   
+Feature Map: 2 × 2 × 64***    
+   
+***`Max Pooling`***  
+- ***Window-এর মধ্যে থেকে maximum value নেয়।***
+
+***`Average Pooling`:***  
+- ***Window-এর মধ্যে থাকা value-এর average নেয়।***  
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img12.gif" width="650">
+
+***2 × 2 Max/Avg Pooling apply করলেে Height এবং Width অর্ধেক হয়ে যায়।***  
+
+---
 # ***Resources***
 - [***Awesome Explanation and Visualization***](https://medium.com/thedeephub/convolutional-neural-networks-a-comprehensive-guide-5cc0b5eae175)
 - [***Website For CNN Visualization (Deeplizard)***](https://deeplizard.com/resource/pavq7noze2)
