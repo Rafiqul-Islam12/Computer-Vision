@@ -81,12 +81,24 @@
 - ***(3 × 0) + (4 × 1) + (6 × 2) + (7 × 3) = 37***  
 - ***(4 × 0) + (5 × 1) + (7 × 2) + (8 × 3) = 43***
    
-***The output matrix of this process is known as the Feature map.***  
+***The output matrix of this process is known as the `Feature map`.***  
 
 ---
+### ***Problem***  
+- ***Image-এর size ধীরে ধীরে ছোট হয়ে যায়।***
+- ***যদি অনেক Convolution Layer ব্যবহার করা হয়, তাহলে image বা feature map খুব ছোট হয়ে যায়, ফলে গুরুত্বপূর্ণ information হারানোর সম্ভাবনা থাকে।***   
+- ***Corner ও edge pixels কমবার process হয়, তাই border-এর গুরুত্বপূর্ণ feature হারিয়ে যেতে পারে।***   
+- ***Center pixels বেশি গুরুত্ব পায়, কারণ kernel তাদের উপর অনেকবার যায়।***   
 
+---
+## ***Stride***  
+- ***Stride হলো kernel এক বারে কত pixel move করবে।***
+- ***Stride = 1 → Kernel ১ pixel করে move করে।***
+- ***Stride = 2 → Kernel ২ pixel করে move করে***
 
+***Stride = 1***   
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img06.gif" width="600">  
 
-
-
+***Stride = 2***   
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img07.gif" width="600">  
 
