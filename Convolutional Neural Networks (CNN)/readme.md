@@ -83,9 +83,9 @@
    
 ***The output matrix of this process is known as the `Feature map`.***  
 
----
 ### ***Problem***  
-- ***Image-এর size ধীরে ধীরে ছোট হয়ে যায়।***
+- ***Image-এর size ধীরে ধীরে ছোট হয়ে যায়।***  
+  ***Input Image = 5 × 5 Convolution (3 × 3 Kernel) Output = 3 × 3***   
 - ***যদি অনেক Convolution Layer ব্যবহার করা হয়, তাহলে image বা feature map খুব ছোট হয়ে যায়, ফলে গুরুত্বপূর্ণ information হারানোর সম্ভাবনা থাকে।***   
 - ***Corner ও edge pixels কমবার process হয়, তাই border-এর গুরুত্বপূর্ণ feature হারিয়ে যেতে পারে।***   
 - ***Center pixels বেশি গুরুত্ব পায়, কারণ kernel তাদের উপর অনেকবার যায়।***   
@@ -96,9 +96,39 @@
 - ***Stride = 1 → Kernel ১ pixel করে move করে।***
 - ***Stride = 2 → Kernel ২ pixel করে move করে***
 
-***Stride = 1***   
+***`Stride = 1`***   
 <img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img06.gif" width="600">  
 
-***Stride = 2***   
+***`Stride = 2`***   
 <img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img07.gif" width="600">  
 
+---
+## ***Padding***  
+- ***Padding হলো input image-এর চারপাশে extra pixels (সাধারণত 0) যোগ করা।***   
+- ***Padding = Valid (Padding = 0) → কোনো extra pixel যোগ করা হয় না।    
+  তাই convolution-এর পরে output size ছোট হয়ে যায়।***  
+- ***Padding = same → Image-এর চারপাশে extra pixels (সাধারণত 0) যোগ করা হয়।   
+  এর ফলে output size input-এর সমান (same) থাকে (যদি stride = 1 হয়)।***  
+
+***`Padding = valid`***   
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img08.gif" width="600">  
+
+***`Padding = same`***   
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img09.gif" width="600">  
+
+---
+### ***Output Size of Convolution Layer***
+***Convolution-এর পরে output feature map-এর size বের করার formula:***   
+
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img10.png" width="450">  
+<img src="https://github.com/Rafiqul-Islam12/Computer-Vision/blob/main/Convolutional%20Neural%20Networks%20(CNN)/images/img11.png" width="600">    
+
+---
+# ***Resources***
+- [***Awesome Explanation and Visualization***](https://medium.com/thedeephub/convolutional-neural-networks-a-comprehensive-guide-5cc0b5eae175)
+- [***Website For CNN Visualization (Deeplizard)***](https://deeplizard.com/resource/pavq7noze2)
+
+---
+## ***Author***   
+***MD. RAFIQUL ISLAM***  
+***CSE, CoU***   
